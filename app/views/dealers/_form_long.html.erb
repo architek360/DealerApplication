@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<%= form_for(@dealer) do |f| %>
+  <% if @dealer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealer.errors.count, "error") %> prohibited this dealer from being saved:</h2>
+
+      <ul>
+      <% @dealer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
+	
+	
+	<%= image_tag("BTI_header.jpg", :alt=>"BTI LOGO", :width=>"1015", :height=>"120")%>
+
+	<table width="1015" border="0" cell-padding="0">
+		<tr>
+			<td colspan="2" align="center">
+					 <span class="text">Thank you for your interest in using BTI as a parts and accessories supplier. Upon completion and approval of this application Visa/Mastercard, ACH or wire transfer will be the accepted means of payment.</span><br>
+
+		
+			</td>
+		</tr>
+
+		<td width="507px" valign="top" bgcolor="#F5F5F5"> 	
+			
+				<span style="font-size: .8em; font-weight: bold;">I. BUSINESS INFORMATION</span>
+					
+				<hr style="margin-top:1px">
+	
+		<div class="field_highlight">
+	      <%= f.label :name, "Name" %><br>
+		  <%= f.text_field :name %>
+	    </div>
+		<div class="field_highlight">
+	      <%= f.label :dba_name, "DBA" %><br>
+	  	  <%= f.text_field :dba_name %>
+	    </div>
+	    <div class="field">
+	      <%= f.label :b_address, "Billing Address" %><br>
+	      <%= f.text_field :b_address %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :b_city, "City" %><br>
+	      <%= f.text_field :b_city %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :b_state, "State" %><br>
+	      <%= f.text_field :b_state %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :b_zip, "ZIP" %><br>
+	      <%= f.text_field :b_zip %>
+	    </div> 
+	    <div class="clear"></div>
+		<div class="box">
+		  <%= check_box_tag(:ship_bill) %>
+		  <%= f.label(:ship_bill, "Shipping address same as Billing*") %>
+		</div>  
+		<div class="clear"></div>
+	    <div class="field">
+	      <%= f.label :address, "Shipping Address" %><br>
+	      <%= f.text_field :address %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :city %><br>
+	      <%= f.text_field :city %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :state %><br>
+	      <%= f.text_field :state %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :zip, "ZIP" %><br>
+	      <%= f.text_field :zip %>
+	    </div> 
+	    <div class="clear"></div>	
+	    <div class="field_highlight_medium">
+	      <%= f.label :phone, "Phone" %><br>
+	      <%= f.text_field :phone %>
+	    </div>
+	    <div class="field_medium">
+	      <%= f.label :fax, "fax" %><br>
+	      <%= f.text_field :fax %>
+	    </div>
+		<div class="clear"></div>
+		<div class="box">
+		  <%= check_box_tag(:corp) %>
+		  <%= f.label(:corp, "Corporation") %>
+		  <%= check_box_tag(:part) %>
+		  <%= f.label(:part, "Partnership") %>
+		  <%= check_box_tag(:sole) %>
+		  <%= f.label(:sole, "Sole Proprietorship") %>
+	  </div>
+	    <div class="field_medium">
+	      <%= f.label :ein, "Business License/EIN #" %><br>
+	      <%= f.text_field :ein %>
+	    </div>
+	    <div class="field_medium">
+	      <%= f.label :ein_date, "Date Begun" %><br>
+	      <%= f.date_field :ein_date %>
+	    </div>
+		<div class="clear"></div>
+	</div>
+	<div class="field_highlight_medium">
+	  <%= f.label :email, "Email" %><br>
+	  <%= f.email_field :email %>
+	</div>
+	    <div class="field_medium">
+	      <%= f.label :website, "Website" %><br>
+	      <%= f.url_field :website %>
+	    </div>
+	<div class="clear"></div>
+
+		<span style="font-size: .8em; font-weight: bold;">II. PPRINCIPALS</span>
+			
+		<hr style="margin-top:1px">
+		<div class="field_medium">
+	      <%= f.label :principal_a_name, "Name" %><br>
+		  <%= f.text_field :principal_a_name %>
+	    </div>
+		<div class="field_medium">
+	      <%= f.label :principal_a_title, "Title" %><br>
+	  	  <%= f.text_field :principal_a_title %>
+	    </div>
+		<div class="clear"></div>
+	    <div class="field">
+	      <%= f.label :principal_a_address, "Address" %><br>
+	      <%= f.text_field :principal_a_address %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :principal_a_city, "City" %><br>
+	      <%= f.text_field :principal_a_city %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :principal_a_state, "State" %><br>
+	      <%= f.text_field :principal_a_state %>
+	    </div>
+	    <div class="field_short">
+	      <%= f.label :principal_a_zip, "ZIP" %><br>
+	      <%= f.text_field :principal_a_zip %>
+	    </div> 
+	    <div class="clear"></div>
+	    <div class="field_medium">
+	      <%= f.label :principal_a_phone, "Phone" %><br>
+	      <%= f.text_field :principal_a_phone %>
+	    </div>
+	    <div class="field_medium">
+	      <%= f.label :principal_a_email, "Email" %><br>
+	      <%= f.text_field :principal_a_email %>
+	    </div>
+		<br>
+  		<div class="field_medium">
+  	      <%= f.label :principal_b_name, "Name" %><br>
+  		  <%= f.text_field :principal_b_name %>
+  	    </div>
+	  	<div class="field_medium">
+	        <%= f.label :principal_b_title, "Title" %><br>
+	    	  <%= f.text_field :principal_b_title %>
+	      </div>
+		  <div class="clear"></div>
+	      <div class="field">
+	        <%= f.label :principal_b_address, "Address" %><br>
+	        <%= f.text_field :principal_b_address %>
+	      </div>
+		  <div class="clear"></div>
+	      <div class="field_short">
+	        <%= f.label :principal_b_city, "City" %><br>
+	        <%= f.text_field :principal_b_city %>
+	      </div>
+	      <div class="field_short">
+	        <%= f.label :principal_b_state, "State" %><br>
+	        <%= f.text_field :principal_b_address %>
+	      </div>
+	      <div class="field_short">
+	        <%= f.label :principal_b_zip, "ZIP" %><br>
+	        <%= f.text_field :principal_b_zip %>
+	      </div> 
+	      <div class="clear"></div>
+	      <div class="field_medium">
+	        <%= f.label :principal_b_phone, "Phone" %><br>
+	        <%= f.text_field :principal_b_phone %>
+	      </div>
+	      <div class="field_medium">
+	        <%= f.label :principal_b_email, "Email" %><br>
+	        <%= f.text_field :principal_b_email %>
+	      </div>
+
+
+	  	<span style="font-size: .8em; font-weight: bold;">III. ESTABLISHED TRADE ACCOUNTS</span>
+		
+	  	<hr style="margin-top:1px"> 
+		<div class="field">
+	     <%= f.label :trade_name_a, "Name" %><br>
+	     <%= f.text_field :trade_name_a %>
+	    </div>
+	    <div class="field_medium">
+	     <%= f.label :trade_account_a, "Account #" %><br>
+		 <%= f.text_field :trade_account_a %>
+	    </div>
+	    <div class="field_medium">
+	     <%= f.label :trade_phone_a, "Phone" %><br>
+	     <%= f.text_field :trade_phone_a %>
+	    </div> 
+		<div class="clear"></div>
+		<br>
+	    <div class="field">
+	      <%= f.label :trade_name_b, "Name" %><br>
+	      <%= f.text_field :trade_name_b %>
+	    </div>
+	    <div class="field_medium">
+	      <%= f.label :trade_account_b, "Account #" %><br>
+	   	  <%= f.text_field :trade_account_b %>
+	    </div>
+	    <div class="field_medium">
+	      <%= f.label :trade_phone_b, "Phone" %><br>
+	      <%= f.text_field :trade_phone_b %>
+	    </div>
+
+	</td>
+	
+	<td width="507px" valign="top" bgcolor="#F5F5F5">
+		
+				<span style="font-size: .8em; font-weight: bold;">IV. TERMS AND CONDITIONS</span>
+						<hr style="margin-top:1px">
+							<span style="font-size: .8em;">Minimum shippable order is $25.00 US and $300 International. Payment can be made by Visa/Mastercard or ACH. International accounts may pay by Visa/Mastercard. BTI’s separate Open Account Application is also available for dealers requesting terms. Approved Open Accounts may pay by company check within the net terms allowed. Returned checks will be subject to a $30.00 service charge per check. All decisions with respect to approval, terms, continuation, revision, or termination of accounts are at the sole discretion of Bicycle Technologies International, Ltd. BTI reserves the right to refuse sales to any account at any time.</span><br /><br />
+				
+				<span style="font-size: .8em; font-weight: bold;">V. AGREEMENT/GUARANTEE</span>
+					<hr style="margin-top:1px">
+					<span style="font-size: .8em;">	I/we certify that the information submitted above, to the best of my knowledge, is true and correct. I/we fully understand and agree to comply with the terms and conditions above. I/we agree to the proper and prompt payment of all invoices from BTI, finance charges and any reasonable legal expenses and other costs that may be incurred by Bicycle Technologies International, Ltd. in the collection or litigation of any obligation. I/we pledge the personal credit of the undersigned for delinquent amounts due to Bicycle Technologies International, Ltd. by the debtor.</span><br /><br />		
+				
+					<span style="font-size: .8em; font-weight: bold;">VI. AGREEMENT/ GUARANTOR SIGNATURE(S):</span>
+						<hr style="margin-top:1px">
+						<span><i>Corporate Officer or Owner</i></span>					
+					
+						<div class="clear"></div>
+						<div class="field_medium">
+					      <%= f.label :officer, "Name" %><br>
+					      <%= f.text_field :officer %>
+					  </div>
+		      			<div class="field_short">
+					      <%= f.label :signiture_date, "Date" %><br>
+					      <%= f.text_field :signiture_date %>
+					    </div>
+						<div class="clear"></div>
+						<div class="box" float:"left">
+						  <%= check_box_tag(:signiture) %>
+						  <%= f.label(:signiture, "by checking this box you are giving your digital signiture that you agree to our terms and conditions above.	") %>
+					  </div>
+					  <br>
+					<span><i>All General Partners Names/Titles</i></span>					
+				
+					<div class="clear"></div>
+					<div class="field_medium">
+				      <%= f.label :partner_a_name, "Name" %><br>
+				      <%= f.text_field :partner_a_name %>
+				  </div>
+	      			<div class="field_short">
+				      <%= f.label :partner_a_date, "Date" %><br>
+				      <%= f.text_field :partner_a_date %>
+				    </div>
+					<div class="clear"></div>
+					<div class="box" float:"left">
+					  <%= check_box_tag(:partner_a_signiture) %>
+					  <%= f.label(:partner_a_signiture, "by checking this box you are giving your digital signiture that you agree to our terms and conditions above.	") %>
+				  </div>
+				  <br>
+			
+				<div class="clear"></div>
+				<div class="field_medium">
+			      <%= f.label :partner_b_name, "Name" %><br>
+			      <%= f.text_field :partner_b_name %>
+			  </div>
+	    			<div class="field_short">
+			      <%= f.label :partner_b_date, "Date" %><br>
+			      <%= f.text_field :partner_b_date %>
+			    </div>
+				<div class="clear"></div>
+				<div class="box" float:"left">
+				  <%= check_box_tag(:partner_b_signiture) %>
+				  <%= f.label(:partner_b_signiture, "by checking this box you are giving your digital signiture that you agree to our terms and conditions above.	") %>
+		       </div>
+		        <%= image_tag("next_steps.png", :alt=>"BTI LOGO", :width=>"508", :height=>"225")%>
+
+			</p>
+		</td>		
+	<tr>
+	<td colspan="3" align="center" valign="top" bgcolor="#F5F5F5">
+	<i>Bicycle Technologies International 33 Velocity Way Santa Fe NM 87508 Phone 505.473.1010 Fax 505.473.0011</i>	
+	<div class="actions">
+	  <%= f.submit %>
+	</div>
+	<br>
+	<br>
+	<%= link_to 'Contact Listing', dealers_path %>
+	<% end %>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+// Place all the styles related to the dealers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family: 'NotoSans';
+    src: url(http://fonts.googleapis.com/css?family=Noto+Sans);
+    src: url('<%= asset_path('NotoSans-Regular.eot') %>'+'?#iefix') format('embedded-opentype'),
+         url('<%= asset_path('fonts/arimo-regular-webfont.woff') %>') format('woff'),
+         url('<%= asset_path('NotoSans-Regular.ttf') %>') format('truetype'),
+         url('<%= asset_path('NotoSans-Regular.svg') %>#ArimoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

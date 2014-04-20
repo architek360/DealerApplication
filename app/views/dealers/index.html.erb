@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<style type="text/css" media="all"> @import "dealerapp2.css";</style>
+<link rel="stylesheet" type="text/css" media="print" href="print.css" />
+
+<table width="1015" border="1" cell-padding="0" bgcolor="#F5F5F5">
+	<tr>
+		<td colspan="4" align="center">
+			<%= image_tag("BTI_header_index.png", :alt=>"BTI LOGO", :width=>"1015", :height=>"120")%>
+			<h1 style="font-weight: bold;">Dealer Contact Information</h1> 
+			
+		</td>
+	</tr>
+	
+	<tr>
+	   <td colspan="4" valign="top" bgcolor="#F5F5F5">
+		   <table width="1015" border="1" cell-padding="0">
+		     <thead>
+		         <th>Name</th>
+				 <th>Store Name</th>
+				 <th>Phone</th>
+				  <th>Email</th>
+				  <th> </th>
+				  <th> </th>
+				  <th> </th>
+		       </tr>
+		     </thead>
+		</td>
+	</tr>
+			 
+
+  <tbody>
+    <% @dealers.each do |dealer| %>
+      <tr>
+        <td><%= dealer.name %></td>
+		<td><%= dealer.dba_name %></td>
+		<td><%= dealer.phone %></td>
+		<td><%= dealer.email %></td>
+        <td><%= link_to'Print', dealer  %></td>
+        <td><%= link_to 'Edit', edit_dealer_path(dealer) %></td>
+        <td><%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<tr>
+	<td align="center">
+		<br>
+		<br>
+		<div class= "actions">
+		<%= link_to 'Contact', new_dealer_path %>
+		</div>
+		<br>
+		<div class= "actions">
+		<%= link_to 'Application', action: "new_long" %>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>		
+	</td>
+</tr>

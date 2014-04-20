@@ -1,0 +1,195 @@
+/* Element Styles */
+
+html {
+   height:100%;
+}
+.NonPrintable
+{
+  display: none;
+} 
+.printable
+{
+	display: all;
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+}
+.printable input
+{
+	display: all;
+	width:390px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+hr { 
+	background-color: black; height: 3px; border: 0;
+}
+form {
+	margin:0;
+	padding:0;
+}
+/*--------------------------- Takes care of font style and is related to app/assets/fonts/font.css.erb*/
+div {
+	font-family:"NotoSans";
+}
+p {
+	font-family:"NotoSans";
+}
+h2 { 
+	font-family:"NotoSans"; 
+}
+em { 
+	font-style: italic; 
+}
+/*-------------------------*/
+p.text {
+	font-size:1em;
+}
+
+ul.text, ol.text {
+	font-size:1em;
+}
+
+ul.text li, ol.text li {
+	margin:5px 0;
+}
+
+a.listLink {
+	color:#053484;
+	white-space:nowrap;
+	text-decoration:none;
+}
+
+a.listLink:visited {
+	color:#3a5899;
+}
+
+a.listLink:hover {
+	color:#688cd8;
+	white-space:nowrap;
+	text-decoration:underline;
+}
+/*clears Div field after float*/
+.clear{
+	clear:both;
+}
+/*controls feild input css*/
+.field_highlight{
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+	
+}
+
+.field_highlight input{
+	width:500px;
+	border: 1px solid red;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+.field_highlight_medium{
+	float:left;
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+}
+.field_highlight_medium input{
+   width:230px;
+   float:left;
+   padding-right:15px;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid #000000;
+}
+.field{
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+	
+	
+}
+
+.field input{
+	width:500px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+	
+
+}
+.field_short{
+	float:left;
+	width:145px;
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+}
+.field_short input{
+	 text-align:left;
+	 width:130px;
+	 float:left;
+	 padding-right:15px;
+     background: transparent;
+     border: none;
+     border-bottom: 1px solid #000000;
+	 
+}
+.field_medium{
+	float:left;
+	text-align:left;
+	padding-right:4px;
+	font-weight:bold;
+	font-size:.8em;
+	white-space:nowrap;
+}
+.field_medium input{
+	 width:230px;
+	 float:left;
+	 padding-right:15px;
+     background: transparent;
+     border: none;
+     border-bottom: 1px solid #000000;
+
+}
+/*Validation */
+.field_with_errors {
+  padding: 1px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 1px solid red;
+  padding: 1px;
+  padding-bottom: 0;
+
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+   .NonPrintable
+   {
+     display: none;
+   } 

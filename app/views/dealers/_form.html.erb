@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<%= form_for(@dealer) do |f| %>
+  <% if @dealer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealer.errors.count, "error") %> prohibited this dealer from being saved:</h2>
+
+      <ul>
+      <% @dealer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
+	
+<%= image_tag("BTI_header_index.png", :alt=>"BTI LOGO", :width=>"1010", :height=>"100")%>
+
+
+<table width="1010" border="0" cell-padding="0">
+
+
+	<td width="1010px" valign="top" bgcolor="#F5F5F5">
+		<h1 style="font-weight: bold;">Dealer Contact Information</h1>		
+			<hr style="margin-top:-10px">
+	
+	<div class="field_medium">
+      <%= f.label :name, "Name" %><br>
+	  <%= f.text_field :name %>
+    </div>
+	<div class="clear"></div>
+	<div class="field_medium">
+      <%= f.label :dba_name, "Company Name" %><br>
+  	  <%= f.text_field :dba_name %>
+    </div>
+    <div class="clear"></div>
+    <div class="field_medium">
+      <%= f.label :phone, "Phone" %><br>
+      <%= f.text_field :phone %>
+    </div>
+	<div class="clear"></div>
+    <div class="field_medium">
+      <%= f.label :email, "Email" %><br>
+      <%= f.email_field :email %>
+    </div>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	</td>		
+<tr>
+<td colspan="3" align="center" valign="top" bgcolor="#F5F5F5">	
+<p><i>Bicycle Technologies International 33 Velocity Way Santa Fe NM 87508 Phone 505.473.1010 Fax 505.473.0011</i></p>
+	<div class="actions">
+	  <%= f.submit  :onclick => "return confirm('Contact has been saved')" %>
+	</div>
+	<br>
+	<br>
+	<%= link_to 'Contact Listing', dealers_path %>
+	<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</td>
+
+</tr>
+
+</table>
+</body>
+</html>
